@@ -49,4 +49,5 @@ This project is licensed under the MIT License.
 ---
 
 **GitHub Repository:**  
-[https://github.com/chandrakantteotia/chatgpt-user-sidebar-ext](https://github.com/chandrakantteotia/chatgpt-user-sidebar-ext)
+[https://github.com/chandrakantteotia/chatgpt-user-sidebar-ext](https://github.com/chandrakantteotia/chatjump.git)
+
