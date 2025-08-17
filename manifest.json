@@ -1,17 +1,43 @@
 {
   "manifest_version": 3,
-  "name": "ChatJump",
-  "version": "1.0",
-  "description": "Sidebar to show only your questions from ChatGPT UI",
-  "permissions": ["storage", "scripting", "activeTab"],
-  "host_permissions": [
-    "https://chat.openai.com/*"
+  "name": "ChatJump Pro",
+  "version": "2.0.0",
+  "description": "Enhanced ChatGPT navigation with sidebar, themes, and message management. Jump to any message instantly!",
+  "author": "ChatJump Team",
+
+  "permissions": [
+    "storage",
+    "activeTab"
   ],
+
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+
   "content_scripts": [
     {
-      "matches": ["https://chat.openai.com/*"],
+      "matches": [
+        "https://chat.openai.com/*",
+        "https://chatgpt.com/*"
+      ],
       "js": ["content.js"],
-      "run_at": "document_idle"
+      "run_at": "document_end"
     }
-  ]
+  ],
+
+  "action": {
+    "default_title": "ChatJump Pro - Quick Chat Navigation",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  }
 }
